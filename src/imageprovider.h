@@ -1,0 +1,18 @@
+#pragma once
+#include <QQuickImageProvider>
+#include <QMutex>
+#include <QMutexLocker>
+
+class TaskImageProvider final : public QQuickImageProvider {
+public:
+    TaskImageProvider() : QQuickImageProvider(QQuickImageProvider::Image) {}
+    void setImage(const QImage &image) { QMutexLocker lock(&m_mutex); m_image = image; }
+    QImage requestImage(const QString &, QSize *size, const QSize &) override {
+        QMutexLocker lock(&m_mutex);
+        if (size) *size = m_image.size();
+        return m_image;
+    }
+private:
+    QMutex m_mutex;
+    QImage m_image;
+};

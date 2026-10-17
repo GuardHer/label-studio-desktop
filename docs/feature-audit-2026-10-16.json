@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "F001",
+    "module": "账户与组织",
+    "feature": "邮箱密码登录",
+    "status": "已实现",
+    "detail": "Django 会话登录和 CSRF；已有真实登录联调记录。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F002",
+    "module": "账户与组织",
+    "feature": "API Token / JWT 登录",
+    "status": "已实现",
+    "detail": "支持旧 Token、JWT Refresh 交换和 Access Token；不等于支持令牌管理。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F003",
+    "module": "账户与组织",
+    "feature": "退出登录",
+    "status": "部分实现",
+    "detail": "清空桌面进程 Cookie 和凭据；未调用 Django logout 注销服务器会话。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F004",
+    "module": "账户与组织",
+    "feature": "新用户注册",
+    "status": "未实现",
+    "detail": "没有注册页面或注册 API 调用。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F005",
+    "module": "账户与组织",
+    "feature": "成员列表",
+    "status": "仅网页跳转",
+    "detail": "QML 无组织成员页面，入口打开 organization 网页。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F006",
+    "module": "账户与组织",
+    "feature": "查看成员活动与贡献",
+    "status": "未实现",
+    "detail": "没有成员详情、最近活动和贡献统计页面。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F007",
+    "module": "账户与组织",
+    "feature": "邀请成员与复制邀请链接",
+    "status": "仅网页跳转",
+    "detail": "Invite Members 打开说明框，再跳转组织网页；无原生获取/复制链接操作。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F008",
+    "module": "账户与组织",
+    "feature": "重置邀请链接",
+    "status": "未实现",
+    "detail": "没有邀请链接重置接口。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F009",
+    "module": "账户与组织",
+    "feature": "组织名称和组织信息",
+    "status": "未实现",
+    "detail": "只有账户邮箱及服务器地址概要，不属于组织信息；无原生组织信息页。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F010",
+    "module": "账户与组织",
+    "feature": "修改名字、姓氏、电话",
+    "status": "仅网页跳转",
+    "detail": "账户页面只读邮箱/服务器；资料修改须到网页。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F011",
+    "module": "账户与组织",
+    "feature": "上传与修改头像",
+    "status": "仅网页跳转",
+    "detail": "显示邮箱首字母圆标，未实现头像上传。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F012",
+    "module": "账户与组织",
+    "feature": "修改账户密码",
+    "status": "未实现",
+    "detail": "没有原生修改密码入口或对应 API 调用；本机网页是否提供单独入口需另核对。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F013",
+    "module": "账户与组织",
+    "feature": "邮件偏好设置",
+    "status": "仅网页跳转",
+    "detail": "本机 Account 有 Email Preferences，QML 没有对应表单。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F014",
+    "module": "账户与组织",
+    "feature": "成员资格和贡献概要",
+    "status": "仅网页跳转",
+    "detail": "本机 Membership Info 页面没有原生对应页面。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F015",
+    "module": "账户与组织",
+    "feature": "创建、查看、撤销个人访问令牌",
+    "status": "仅网页跳转",
+    "detail": "桌面能使用现有令牌，不能管理令牌生命周期。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F016",
+    "module": "账户与组织",
+    "feature": "续期/重新生成传统令牌",
+    "status": "未实现",
+    "detail": "本机组织当前禁用 Legacy Tokens；QML 也无管理接口。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F017",
+    "module": "账户与组织",
+    "feature": "组织级允许 PAT/Legacy 策略",
+    "status": "未实现",
+    "detail": "本机 API Tokens Settings 对话框可见，QML 未接入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F018",
+    "module": "账户与组织",
+    "feature": "快捷键自定义、导入、导出、恢复",
+    "status": "仅网页跳转",
+    "detail": "本机 Hotkeys Beta 页可见，QML 仅提供固定快捷键。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "qml/LoginPage.qml; qml/Main.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F019",
+    "module": "项目管理",
+    "feature": "首页与项目卡片列表",
+    "status": "已实现",
+    "detail": "读取真实项目；显示描述、任务/标注/跳过/预测数量。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F020",
+    "module": "项目管理",
+    "feature": "刷新项目和打开项目",
+    "status": "已实现",
+    "detail": "调用项目及任务 API；项目列表由客户端遍历服务端分页获取。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F021",
+    "module": "项目管理",
+    "feature": "项目创建三步流程",
+    "status": "已实现",
+    "detail": "名称/描述、导入、标注设置三步；创建后可继续导入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F022",
+    "module": "项目管理",
+    "feature": "只填写名称创建空项目",
+    "status": "部分实现",
+    "detail": "QML 总是附带默认矩形配置，不能还原网页中完全未配置标注界面的空项目状态。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F023",
+    "module": "项目管理",
+    "feature": "修改项目名称与描述",
+    "status": "已实现",
+    "detail": "PATCH 项目，保存成功后刷新；失败保留编辑。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F024",
+    "module": "项目管理",
+    "feature": "修改项目颜色",
+    "status": "未实现",
+    "detail": "能显示服务端返回的 color，但无颜色选择或更新操作。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F025",
+    "module": "项目管理",
+    "feature": "项目卡片快捷菜单",
+    "status": "未实现",
+    "detail": "QML 卡片只有打开行为；设置/删除需进入项目。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F026",
+    "module": "项目管理",
+    "feature": "删除项目",
+    "status": "已实现",
+    "detail": "原生二次确认后删除；已有临时项目联调验证。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F027",
+    "module": "项目管理",
+    "feature": "项目搜索与自定义排序",
+    "status": "未实现",
+    "detail": "无项目级搜索/排序控件；网页当前是否提供取决于版本，非已确认本机入口。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F028",
+    "module": "项目管理",
+    "feature": "最近项目排序",
+    "status": "部分实现",
+    "detail": "首页标题是 Recent Projects，但直接使用项目返回列表，未维护按最近访问排序。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F029",
+    "module": "项目管理",
+    "feature": "顺序任务采样设置",
+    "status": "未实现",
+    "detail": "无 sampling 设置；桌面按自己的任务列表顺序打开，未接入服务端采样队列。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F030",
+    "module": "项目管理",
+    "feature": "随机任务采样设置",
+    "status": "未实现",
+    "detail": "网页 General 有 Random sampling，QML 未读取/修改并执行该策略。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F031",
+    "module": "项目管理",
+    "feature": "重置项目缓存",
+    "status": "未实现",
+    "detail": "本机 Danger Zone 明确有 Reset Cache；QML 无入口。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F032",
+    "module": "项目管理",
+    "feature": "丢弃全部数据管理标签页",
+    "status": "未实现",
+    "detail": "本机 Drop All Tabs 可见，QML 无操作。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup_project",
+    "evidence": "qml/HomePage.qml; qml/ProjectsPage.qml; qml/CreateProjectDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F033",
+    "module": "标注配置与模板编辑",
+    "feature": "XML 配置编辑并保存到 Django",
+    "status": "已实现",
+    "detail": "可编辑 XML 字符串并提交项目；本地能标注的类型仍受解析器限制。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F034",
+    "module": "标注配置与模板编辑",
+    "feature": "矩形与多边形基础模板",
+    "status": "已实现",
+    "detail": "只有两类实际可用模板；完整模板目录见附录。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F035",
+    "module": "标注配置与模板编辑",
+    "feature": "完整模板库及分类切换",
+    "status": "部分实现",
+    "detail": "显示多类模板文字，但只实现两张计算机视觉模板卡片，分类文字无切换行为。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F036",
+    "module": "标注配置与模板编辑",
+    "feature": "可视化批量输入标签名称",
+    "status": "部分实现",
+    "detail": "按行输入标签并生成矩形/多边形 XML；不能完整反向编辑任意现有配置。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F037",
+    "module": "标注配置与模板编辑",
+    "feature": "标签颜色选择器",
+    "status": "未实现",
+    "detail": "自动分配固定颜色；可通过 XML 写 background，未提供颜色选择器。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F038",
+    "module": "标注配置与模板编辑",
+    "feature": "自定义数据字段映射",
+    "status": "部分实现",
+    "detail": "XML 可手动修改 Image value/name/toName，能解析单一直接任务字段；无可视化映射向导。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F039",
+    "module": "标注配置与模板编辑",
+    "feature": "配置 XML 语法高亮与自动补全",
+    "status": "未实现",
+    "detail": "Consolas 文本框，没有标签/属性补全。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F040",
+    "module": "标注配置与模板编辑",
+    "feature": "真实配置预览",
+    "status": "未实现",
+    "detail": "Preview 显示固定示例图片，不能按当前 XML 和任务实时渲染。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F041",
+    "module": "标注配置与模板编辑",
+    "feature": "通用 XML 对象/控制/视觉标签引擎",
+    "status": "未实现",
+    "detail": "不是通用 XML 渲染器；仅提取 Image、一个形状控件和静态 Label。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F042",
+    "module": "标注配置与模板编辑",
+    "feature": "一个任务混用矩形和多边形控件",
+    "status": "未实现",
+    "detail": "configure 要求 controls == 1。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F043",
+    "module": "标注配置与模板编辑",
+    "feature": "多图片及图片列表",
+    "status": "未实现",
+    "detail": "configure 要求 images == 1，拒绝 valueList/selectionEnabled。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F044",
+    "module": "标注配置与模板编辑",
+    "feature": "XML 的布局、Header、Text、Style 渲染",
+    "status": "未实现",
+    "detail": "这些标签部分被白名单接受，但对应布局/文字/CSS 内容被忽略。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F045",
+    "module": "标注配置与模板编辑",
+    "feature": "动态标签与 Label alias",
+    "status": "未实现",
+    "detail": "只能读静态 Label value，alias 明确拒绝。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F046",
+    "module": "标注配置与模板编辑",
+    "feature": "标签 hotkey 属性与数字快捷键",
+    "status": "未实现",
+    "detail": "标签显示 1/2 等数字，但没有对应 Shortcut；hotkey 属性也未解析。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F047",
+    "module": "标注配置与模板编辑",
+    "feature": "必填、条件显隐、范围限制等配置语义",
+    "status": "未实现",
+    "detail": "未实现 required、visibleWhen、perRegion 等通用属性语义。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F048",
+    "module": "标注配置与模板编辑",
+    "feature": "配置兼容性与不支持数据保护",
+    "status": "部分实现",
+    "detail": "不支持的标签/旋转/结果会禁用编辑；部分被忽略的属性不会被完整检出，不能视为全兼容校验。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/setup",
+    "evidence": "qml/LabelingSetup.qml; qml/ProjectSettings.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "F049",
+    "module": "数据管理器",
+    "feature": "任务列表与网格",
+    "status": "已实现",
+    "detail": "真实 API 任务、鉴权缩略图，两种显示方式。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F050",
+    "module": "数据管理器",
+    "feature": "任务基础统计列",
+    "status": "已实现",
+    "detail": "ID、完成、标注数、跳过数、预测数和标注人；不代表能编辑预测。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F051",
+    "module": "数据管理器",
+    "feature": "服务端分页",
+    "status": "已实现",
+    "detail": "固定每页 50，支持翻页及末页失效恢复。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F052",
+    "module": "数据管理器",
+    "feature": "自选每页条数",
+    "status": "未实现",
+    "detail": "没有页大小选择器。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F053",
+    "module": "数据管理器",
+    "feature": "任务文件名搜索",
+    "status": "已实现",
+    "detail": "服务端对配置的 image 字段 contains 查询。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F054",
+    "module": "数据管理器",
+    "feature": "数字任务 ID 精确搜索",
+    "status": "已实现",
+    "detail": "数值输入转换为 task ID equal。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F055",
+    "module": "数据管理器",
+    "feature": "已标注/未标注筛选",
+    "status": "已实现",
+    "detail": "服务端 completed_at empty 条件。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F056",
+    "module": "数据管理器",
+    "feature": "按 ID 升降序",
+    "status": "已实现",
+    "detail": "使用服务端 ordering。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F057",
+    "module": "数据管理器",
+    "feature": "任意字段排序",
+    "status": "未实现",
+    "detail": "网页支持 Created at、预测分数等；QML 仅 ID。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F058",
+    "module": "数据管理器",
+    "feature": "多字段与 AND/OR 复杂筛选",
+    "status": "未实现",
+    "detail": "QML 只组合固定的搜索和完成状态；不是网页通用 Filter Builder。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F059",
+    "module": "数据管理器",
+    "feature": "按标注人、时间、数量、分数筛选",
+    "status": "未实现",
+    "detail": "本机 Filters 字段菜单已观察到这些字段。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F060",
+    "module": "数据管理器",
+    "feature": "按标注结果/预测结果筛选",
+    "status": "未实现",
+    "detail": "本机字段菜单出现 Annotation results/Prediction results；可用语义与版本有关。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F061",
+    "module": "数据管理器",
+    "feature": "复制/粘贴筛选 JSON、固定筛选侧栏",
+    "status": "未实现",
+    "detail": "本机有 Copy/Paste filters 和 Pin filters，QML 无。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F062",
+    "module": "数据管理器",
+    "feature": "新建、重命名、删除、保存标签页",
+    "status": "未实现",
+    "detail": "QML Default 只是固定外观，无标签页 API。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F063",
+    "module": "数据管理器",
+    "feature": "完整列选择与动态任务字段",
+    "status": "部分实现",
+    "detail": "只能额外开关文件名和创建时间；其他列固定，不能显示任意 data 字段。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F064",
+    "module": "数据管理器",
+    "feature": "列宽调整、列顺序与密度",
+    "status": "未实现",
+    "detail": "列宽基本固定；没有网页 Comfortable/Compact 密度切换。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F065",
+    "module": "数据管理器",
+    "feature": "单任务勾选",
+    "status": "已实现",
+    "detail": "选择具体 task ID。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F066",
+    "module": "数据管理器",
+    "feature": "当前页全选",
+    "status": "已实现",
+    "detail": "勾选本页任务。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F067",
+    "module": "数据管理器",
+    "feature": "跨页保留所选任务",
+    "status": "已实现",
+    "detail": "维护具体 ID 集合，筛选变化清空。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F068",
+    "module": "数据管理器",
+    "feature": "一键全选全部筛选结果",
+    "status": "未实现",
+    "detail": "批量接口始终 all=false + included IDs，不能服务端全选整个结果集。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F069",
+    "module": "数据管理器",
+    "feature": "批量删除任务",
+    "status": "已实现",
+    "detail": "确认后提交 delete_tasks。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F070",
+    "module": "数据管理器",
+    "feature": "批量删除全部标注和草稿",
+    "status": "已实现",
+    "detail": "确认后提交 delete_tasks_annotations。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F071",
+    "module": "数据管理器",
+    "feature": "按指定标注人删除标注",
+    "status": "未实现",
+    "detail": "网页删除对话框的标注人表单未接入，QML 总是清空所选任务的全部标注。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F072",
+    "module": "数据管理器",
+    "feature": "批量删除预测",
+    "status": "已实现",
+    "detail": "提交 delete_tasks_predictions；不代表实现预标注查看/使用。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F073",
+    "module": "数据管理器",
+    "feature": "检索模型预测",
+    "status": "未实现",
+    "detail": "本机 Actions 的 Retrieve Predictions 未接入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F074",
+    "module": "数据管理器",
+    "feature": "从预测批量创建标注",
+    "status": "未实现",
+    "detail": "本机 Create Annotations From Predictions 未接入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F075",
+    "module": "数据管理器",
+    "feature": "移除重复任务",
+    "status": "未实现",
+    "detail": "本机 Remove Duplicated Tasks 未接入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F076",
+    "module": "数据管理器",
+    "feature": "按所选 N 条任务进入标注队列",
+    "status": "未实现",
+    "detail": "QML 勾选用于删除；Label All Tasks 仍从当前列表首条开始，未用选中 ID 集合。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F077",
+    "module": "数据管理器",
+    "feature": "按当前筛选/排序逐条标注",
+    "status": "部分实现",
+    "detail": "在已支持的固定查询范围内可跨页顺序前进；非服务端完整采样/任务分配流程。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F078",
+    "module": "数据管理器",
+    "feature": "任务快速查看侧栏",
+    "status": "未实现",
+    "detail": "QML 点击任务切换到全页 Workspace，未复刻网页数据管理器与编辑器并排视图。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F079",
+    "module": "数据管理器",
+    "feature": "原始任务 JSON/任务源查看",
+    "status": "未实现",
+    "detail": "本机 view-task-source 入口可见，QML 无详情查看器。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F080",
+    "module": "数据管理器",
+    "feature": "完整任务信息和概要面板",
+    "status": "部分实现",
+    "detail": "有数量和 ID，缺任意元数据、创建/修改人、模型分数及完整任务概要。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/manage_data",
+    "evidence": "qml/ProjectPage.qml; src/taskworkflow.cpp; src/apiclient.cpp"
+  },
+  {
+    "id": "F081",
+    "module": "导入",
+    "feature": "多图片本地上传",
+    "status": "已实现",
+    "detail": "multipart 每文件独立字段，有真实多文件联调。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F082",
+    "module": "导入",
+    "feature": "拖放、浏览文件、待导入清单",
+    "status": "已实现",
+    "detail": "原生文件选择器/DropArea；支持清空选择。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F083",
+    "module": "导入",
+    "feature": "JSON/CSV/TSV 任务文件",
+    "status": "部分实现",
+    "detail": "可交给 Django 导入；原生标注仅单图片矩形/多边形，不能等同于任意结构化任务支持。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F084",
+    "module": "导入",
+    "feature": "数据集 URL 导入",
+    "status": "已实现",
+    "detail": "http(s) URL 表单编码交给 Django 导入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F085",
+    "module": "导入",
+    "feature": "包含既有标注的 JSON 导入",
+    "status": "部分实现",
+    "detail": "通用上传可由后端导入；原生只可读取受支持的矩形/多边形结果，未逐格式实测。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F086",
+    "module": "导入",
+    "feature": "包含 predictions 的 JSON 导入",
+    "status": "部分实现",
+    "detail": "能传给后端；QML fetchTask 不读取 predictions，无法显示/接受预标注。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F087",
+    "module": "导入",
+    "feature": "音频/视频/文本/HTML/PDF 导入并标注",
+    "status": "未实现",
+    "detail": "All files 可能把文件传到 Django，但没有对应原生对象与标注控件，业务流程不成立。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F088",
+    "module": "导入",
+    "feature": "大文件分块、后台导入、可恢复上传",
+    "status": "未实现",
+    "detail": "客户端一次拼装请求，批次约 64 MB 限制；没有分块/断点续传。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F089",
+    "module": "导入",
+    "feature": "多 URL 队列与导入结果明细",
+    "status": "部分实现",
+    "detail": "一个 URL 输入，返回统一成功/失败消息；无网页逐文件明细、字段映射与完整导入向导。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F090",
+    "module": "导入",
+    "feature": "云端/本地目录同步导入",
+    "status": "未实现",
+    "detail": "需要存储配置和同步接口，QML 都没有。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/tasks",
+    "evidence": "qml/ImportPane.qml; qml/ImportDialog.qml; src/projectapi.cpp"
+  },
+  {
+    "id": "F091",
+    "module": "导出",
+    "feature": "完整 Label Studio JSON 导出",
+    "status": "已实现",
+    "detail": "同步 GET exportType=JSON，包含全部任务，QSaveFile 原子写入；已验证重载导出。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F092",
+    "module": "导出",
+    "feature": "只导出选中任务/当前筛选标签页",
+    "status": "未实现",
+    "detail": "固定 download_all_tasks=true，不使用选中集/筛选器限定导出。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F093",
+    "module": "导出",
+    "feature": "仅导出已标注任务",
+    "status": "未实现",
+    "detail": "没有导出范围选择开关。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F094",
+    "module": "导出",
+    "feature": "导出格式选择器",
+    "status": "未实现",
+    "detail": "文件对话框只提供 JSON。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F095",
+    "module": "导出",
+    "feature": "快照创建、状态和下载管理",
+    "status": "未实现",
+    "detail": "没有 snapshot API 工作流；不能把调用 JSON 导出算成快照导出。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F096",
+    "module": "导出",
+    "feature": "大项目后台导出、进度和重试",
+    "status": "未实现",
+    "detail": "QML 为同步请求，受超时和内存约束。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F097",
+    "module": "导出",
+    "feature": "导出中包含媒体文件",
+    "status": "未实现",
+    "detail": "没有下载媒体和打包功能。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "qml/ProjectPage.qml; src/projectapi.cpp: exportProject"
+  },
+  {
+    "id": "F098",
+    "module": "导出格式",
+    "feature": "JSON-MIN",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F099",
+    "module": "导出格式",
+    "feature": "CSV",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F100",
+    "module": "导出格式",
+    "feature": "TSV",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F101",
+    "module": "导出格式",
+    "feature": "COCO",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F102",
+    "module": "导出格式",
+    "feature": "COCO with Images",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F103",
+    "module": "导出格式",
+    "feature": "Pascal VOC XML",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F104",
+    "module": "导出格式",
+    "feature": "YOLO",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F105",
+    "module": "导出格式",
+    "feature": "YOLO with Images",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F106",
+    "module": "导出格式",
+    "feature": "YOLOv8 OBB",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F107",
+    "module": "导出格式",
+    "feature": "YOLOv8 OBB with Images",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F108",
+    "module": "导出格式",
+    "feature": "CoNLL2003",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F109",
+    "module": "导出格式",
+    "feature": "Brush labels to NumPy",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F110",
+    "module": "导出格式",
+    "feature": "Brush labels to PNG",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F111",
+    "module": "导出格式",
+    "feature": "Brush labels to COCO",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F112",
+    "module": "导出格式",
+    "feature": "ASR Manifest",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F113",
+    "module": "导出格式",
+    "feature": "DocLang (.dclx)",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F114",
+    "module": "导出格式",
+    "feature": "spaCy（文档列出，当前图片项目导出列表未显示）",
+    "status": "未实现",
+    "detail": "QML 没有该格式入口、转换请求或下载处理；能否服务端导出还取决于项目标注类型。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/export",
+    "evidence": "src/projectapi.cpp: exportProject 固定 exportType=JSON"
+  },
+  {
+    "id": "F115",
+    "module": "标注工作流与工作区",
+    "feature": "读取已有矩形/多边形标注",
+    "status": "已实现",
+    "detail": "解析结果并保留区域 ID；不支持其他结果组合。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F116",
+    "module": "标注工作流与工作区",
+    "feature": "新建多份标注、切换已有标注",
+    "status": "已实现",
+    "detail": "下拉选择 Annotation 或 New annotation；切换有未保存保护。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F117",
+    "module": "标注工作流与工作区",
+    "feature": "新建提交与已有标注更新",
+    "status": "已实现",
+    "detail": "POST 新标注，PATCH 已有标注；有真实保存重载验证。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F118",
+    "module": "标注工作流与工作区",
+    "feature": "提交/更新后继续下一任务",
+    "status": "已实现",
+    "detail": "可选 Next after submit，支持跨任务分页和列表结束反馈。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F119",
+    "module": "标注工作流与工作区",
+    "feature": "上一任务/下一任务",
+    "status": "已实现",
+    "detail": "在桌面当前查询顺序内导航。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F120",
+    "module": "标注工作流与工作区",
+    "feature": "提交并退出标注流",
+    "status": "未实现",
+    "detail": "没有一键 Submit and Exit，只能保存后另行导航。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F121",
+    "module": "标注工作流与工作区",
+    "feature": "真正记录跳过状态",
+    "status": "已实现",
+    "detail": "创建 was_cancelled=true 空标注；不覆盖原标注。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F122",
+    "module": "标注工作流与工作区",
+    "feature": "跳过队列、多人预留与锁定语义",
+    "status": "部分实现",
+    "detail": "记录跳过后按桌面列表前进；未使用服务端 next-task/锁超时队列完整工作流。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F123",
+    "module": "标注工作流与工作区",
+    "feature": "空标注提交",
+    "status": "已实现",
+    "detail": "受支持配置可提交空 result；没有项目级开关或必填语义校验。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F124",
+    "module": "标注工作流与工作区",
+    "feature": "删除当前标注",
+    "status": "已实现",
+    "detail": "确认后 DELETE annotation，刷新任务统计。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F125",
+    "module": "标注工作流与工作区",
+    "feature": "设置/取消 Ground truth",
+    "status": "已实现",
+    "detail": "PATCH ground_truth；已有唯一性及真实接口验证，文档版本表差异见备注。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F126",
+    "module": "标注工作流与工作区",
+    "feature": "全部标注并排比较",
+    "status": "未实现",
+    "detail": "本机 Compare All 按钮可见；QML 只能逐份切换。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F127",
+    "module": "标注工作流与工作区",
+    "feature": "标注人姓名、时间、分数等详情",
+    "status": "部分实现",
+    "detail": "下拉显示 User ID 和标注号；缺完整作者、时间、计时、分数、来源信息。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F128",
+    "module": "标注工作流与工作区",
+    "feature": "未保存修改离开确认",
+    "status": "已实现",
+    "detail": "任务/页面/关闭/标注切换时保留保护；包括未闭合多边形。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F129",
+    "module": "标注工作流与工作区",
+    "feature": "失败后保留编辑、撤销/重做",
+    "status": "已实现",
+    "detail": "内存历史及保存失败保留编辑；不是服务器版本历史。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F130",
+    "module": "标注工作流与工作区",
+    "feature": "自动保存草稿到服务器",
+    "status": "未实现",
+    "detail": "无 drafts API；离开或崩溃后不能恢复未提交修改。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F131",
+    "module": "标注工作流与工作区",
+    "feature": "草稿列表、恢复和草稿转正式标注",
+    "status": "未实现",
+    "detail": "没有原生草稿管理。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F132",
+    "module": "标注工作流与工作区",
+    "feature": "重置当前编辑到已保存状态",
+    "status": "部分实现",
+    "detail": "导航放弃确认可以还原；缺网页独立 Reset 按钮。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F133",
+    "module": "标注工作流与工作区",
+    "feature": "标注耗时/暂停计时",
+    "status": "未实现",
+    "detail": "保存只传 result，未维护 lead_time、暂停和恢复逻辑。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F134",
+    "module": "标注工作流与工作区",
+    "feature": "展示标注说明与标注前弹窗",
+    "status": "未实现",
+    "detail": "既没有说明设置表单，也没有读取并呈现说明。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F135",
+    "module": "标注工作流与工作区",
+    "feature": "区域列表与选择",
+    "status": "已实现",
+    "detail": "有平面区域列表、单选、标签和基本坐标显示。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F136",
+    "module": "标注工作流与工作区",
+    "feature": "区域属性数值编辑",
+    "status": "未实现",
+    "detail": "坐标是只读 Label，不能数值输入 X/Y/W/H/角度。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F137",
+    "module": "标注工作流与工作区",
+    "feature": "隐藏/显示单个或全部区域",
+    "status": "未实现",
+    "detail": "没有可见性状态或眼睛工具。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F138",
+    "module": "标注工作流与工作区",
+    "feature": "锁定/解锁区域",
+    "status": "未实现",
+    "detail": "没有区域锁和对应交互。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F139",
+    "module": "标注工作流与工作区",
+    "feature": "多选区域、批量改标签/删除",
+    "status": "未实现",
+    "detail": "仅 selectedIndex 单选。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F140",
+    "module": "标注工作流与工作区",
+    "feature": "复制、粘贴、克隆区域",
+    "status": "未实现",
+    "detail": "无 Ctrl+D/C/V 或等价命令。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F141",
+    "module": "标注工作流与工作区",
+    "feature": "区域分组、排序、层级大纲",
+    "status": "未实现",
+    "detail": "没有按标签/工具分组、树结构、时间/分数排序。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F142",
+    "module": "标注工作流与工作区",
+    "feature": "区域关系/关系标签/方向",
+    "status": "未实现",
+    "detail": "解析器拒绝 Relations 及 relation 结果。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F143",
+    "module": "标注工作流与工作区",
+    "feature": "区域自定义元数据和每区域控件",
+    "status": "未实现",
+    "detail": "无 perRegion 控件或 metadata 编辑器。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F144",
+    "module": "标注工作流与工作区",
+    "feature": "预测可视化、置信分数和来源",
+    "status": "未实现",
+    "detail": "不读取 task.predictions，不能把预测计数列视为可视化。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F145",
+    "module": "标注工作流与工作区",
+    "feature": "接受/拒绝模型建议",
+    "status": "未实现",
+    "detail": "没有预测建议状态或转人工标注流程。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F146",
+    "module": "标注工作流与工作区",
+    "feature": "编辑器布局、面板停靠/折叠/全屏",
+    "status": "未实现",
+    "detail": "工作区使用固定左右布局，没有网页 Outliner 布局管理。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F147",
+    "module": "标注工作流与工作区",
+    "feature": "编辑器偏好设置",
+    "status": "未实现",
+    "detail": "无标签显示、透明度、线宽、保持选中、界面按钮等偏好配置。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F148",
+    "module": "标注工作流与工作区",
+    "feature": "标注历史记录/版本追踪",
+    "status": "未实现",
+    "detail": "QML 撤销仅本次会话；本机 History 入口存在但本轮未验证付费后端完整能力。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F149",
+    "module": "标注工作流与工作区",
+    "feature": "评论、回复、解决和通知",
+    "status": "未实现",
+    "detail": "本机 Comments 入口可见；没有 QML 页面/接口；未发送评论验证服务器写入。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F150",
+    "module": "标注工作流与工作区",
+    "feature": "任务/标注/区域深链接",
+    "status": "未实现",
+    "detail": "无原生 URL/deep-link 解析和定位。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F151",
+    "module": "标注工作流与工作区",
+    "feature": "固定常用快捷键",
+    "status": "已实现",
+    "detail": "R/V/H、保存、撤销、重做、Delete、Enter/Esc；与网页完整键表不同。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F152",
+    "module": "标注工作流与工作区",
+    "feature": "用户/项目级快捷键同步",
+    "status": "未实现",
+    "detail": "未读取后端用户 Hotkeys 或 EDITOR_KEYMAP。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "qml/Workspace.qml; qml/AnnotationCanvas.qml; src/apiclient.cpp; src/taskworkflow.cpp"
+  },
+  {
+    "id": "F153",
+    "module": "图片绘制与编辑",
+    "feature": "轴对齐带标签矩形绘制",
+    "status": "已实现",
+    "detail": "拖动绘制、百分比坐标、保留 ID。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F154",
+    "module": "图片绘制与编辑",
+    "feature": "矩形移动与四角缩放",
+    "status": "已实现",
+    "detail": "鼠标编辑，有原生 UI 自动测试。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F155",
+    "module": "图片绘制与编辑",
+    "feature": "带标签多边形绘制",
+    "status": "已实现",
+    "detail": "逐点、点击首点/Enter 闭合、Esc 取消。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F156",
+    "module": "图片绘制与编辑",
+    "feature": "多边形顶点拖动与整体移动",
+    "status": "已实现",
+    "detail": "有原生 UI 和真实后端多边形联调。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F157",
+    "module": "图片绘制与编辑",
+    "feature": "多边形添加/删除已有顶点",
+    "status": "未实现",
+    "detail": "现有顶点可拖动，未实现插入/移除顶点。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F158",
+    "module": "图片绘制与编辑",
+    "feature": "修改区域标签与删除",
+    "status": "已实现",
+    "detail": "单选区域修改标签/删除。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F159",
+    "module": "图片绘制与编辑",
+    "feature": "图片缩放、平移、适应窗口",
+    "status": "已实现",
+    "detail": "滚轮、按钮、中键；zoom 约 0.2 到 8 倍。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F160",
+    "module": "图片绘制与编辑",
+    "feature": "图片原始尺寸与 EXIF 方向",
+    "status": "已实现",
+    "detail": "C++ 读取尺寸/EXIF，已有方向坐标测试。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F161",
+    "module": "图片绘制与编辑",
+    "feature": "图片/矩形旋转、三点旋转框",
+    "status": "未实现",
+    "detail": "非零 image_rotation/rotation 结果被拒绝。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F162",
+    "module": "图片绘制与编辑",
+    "feature": "椭圆、关键点、笔刷、掩码、向量",
+    "status": "未实现",
+    "detail": "均无原生绘制工具和结果处理；标签明细见附录。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F163",
+    "module": "图片绘制与编辑",
+    "feature": "无标签区域与后补标签",
+    "status": "未实现",
+    "detail": "必须有至少一个静态标签，且结果必须单标签。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F164",
+    "module": "图片绘制与编辑",
+    "feature": "同一区域多标签/多控件结果",
+    "status": "未实现",
+    "detail": "结果验证要求一个标签、单一形状控件。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F165",
+    "module": "图片绘制与编辑",
+    "feature": "按实例像素分割及擦除",
+    "status": "未实现",
+    "detail": "没有画笔、位掩码或橡皮擦。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F166",
+    "module": "图片绘制与编辑",
+    "feature": "图像亮度/对比度/滤镜",
+    "status": "未实现",
+    "detail": "没有图像调节工具。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F167",
+    "module": "图片绘制与编辑",
+    "feature": "多图页导航、多模态联动",
+    "status": "未实现",
+    "detail": "只展示一张图片。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/labeling",
+    "evidence": "src/annotationdocument.cpp; qml/AnnotationCanvas.qml"
+  },
+  {
+    "id": "F168",
+    "module": "模型与预测",
+    "feature": "模型连接新增/列表/修改/删除",
+    "status": "未实现",
+    "detail": "项目设置无 Model 分区，未调用 ML backend 管理接口。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F169",
+    "module": "模型与预测",
+    "feature": "模型认证、参数和交互模式",
+    "status": "未实现",
+    "detail": "无模型连接表单。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F170",
+    "module": "模型与预测",
+    "feature": "模型测试请求与健康检查",
+    "status": "未实现",
+    "detail": "未提供 Send Test Request。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F171",
+    "module": "模型与预测",
+    "feature": "手动启动训练",
+    "status": "未实现",
+    "detail": "无 Start Training。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F172",
+    "module": "模型与预测",
+    "feature": "提交后触发训练设置",
+    "status": "未实现",
+    "detail": "无法配置后端训练开关；服务端已经配置的自动行为不算 QML 功能。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F173",
+    "module": "模型与预测",
+    "feature": "预测版本/分数列表与管理",
+    "status": "未实现",
+    "detail": "无 Predictions 分区，仅显示任务预测数量。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F174",
+    "module": "模型与预测",
+    "feature": "选择预标注来源与默认模型",
+    "status": "未实现",
+    "detail": "没有 model_version/prelabel 配置。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F175",
+    "module": "模型与预测",
+    "feature": "启用/禁用用预测预标注",
+    "status": "未实现",
+    "detail": "没有 Annotation Settings 对应表单和渲染。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F176",
+    "module": "模型与预测",
+    "feature": "智能工具与交互预测调用",
+    "status": "未实现",
+    "detail": "没有 context/predict 请求、SAM/自动检测等工具。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F177",
+    "module": "模型与预测",
+    "feature": "预测数据上传后修正提交",
+    "status": "部分实现",
+    "detail": "JSON 可交给后端；QML 不读取 predictions，只有转为支持的正式标注后才可编辑。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/ml",
+    "evidence": "src/apiclient.h; src/apiclient.cpp; qml/ProjectSettings.qml"
+  },
+  {
+    "id": "F178",
+    "module": "存储",
+    "feature": "源存储新增/修改/删除",
+    "status": "未实现",
+    "detail": "无 Cloud Storage 分区或存储 API。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F179",
+    "module": "存储",
+    "feature": "目标存储新增/修改/删除",
+    "status": "未实现",
+    "detail": "无原生目标存储管理。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F180",
+    "module": "存储",
+    "feature": "源同步与目标标注同步",
+    "status": "未实现",
+    "detail": "无 Sync 操作。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F181",
+    "module": "存储",
+    "feature": "同步状态、历史、错误和计数",
+    "status": "未实现",
+    "detail": "无对应状态页面。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F182",
+    "module": "存储",
+    "feature": "本地目录源/目标存储",
+    "status": "未实现",
+    "detail": "不能配置本地目录、正则或同步策略。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F183",
+    "module": "存储",
+    "feature": "Amazon S3 基础连接",
+    "status": "未实现",
+    "detail": "未接入；后端提供基础连接能力。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F184",
+    "module": "存储",
+    "feature": "Google Cloud Storage 基础连接",
+    "status": "未实现",
+    "detail": "未接入；后端提供基础连接能力。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F185",
+    "module": "存储",
+    "feature": "Azure Blob 基础连接",
+    "status": "未实现",
+    "detail": "未接入；后端提供基础连接能力。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F186",
+    "module": "存储",
+    "feature": "Redis 存储连接",
+    "status": "未实现",
+    "detail": "未接入；后端提供基础连接能力。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F187",
+    "module": "存储",
+    "feature": "文件/任务导入模式与前缀/正则",
+    "status": "未实现",
+    "detail": "没有存储选项表单。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F188",
+    "module": "存储",
+    "feature": "预签名 URL、URI 解析与代理媒体",
+    "status": "部分实现",
+    "detail": "能读普通 http(s)/相对媒体并跟随有限重定向；不会调用任务 URI resolve 接口，原始 s3/gs URI 不能直接使用。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F189",
+    "module": "存储",
+    "feature": "存储凭据/TTL/删除同步配置",
+    "status": "未实现",
+    "detail": "没有相关设置和 API。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/storage",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h"
+  },
+  {
+    "id": "F190",
+    "module": "Webhooks 与开发集成",
+    "feature": "项目 Webhook 列表/新增/编辑/删除",
+    "status": "未实现",
+    "detail": "网页有独立设置页，QML 无。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F191",
+    "module": "Webhooks 与开发集成",
+    "feature": "Webhook 事件选择与启用开关",
+    "status": "未实现",
+    "detail": "没有事件选择表单。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F192",
+    "module": "Webhooks 与开发集成",
+    "feature": "Webhook headers、认证、payload 选项",
+    "status": "未实现",
+    "detail": "没有相关管理接口。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F193",
+    "module": "Webhooks 与开发集成",
+    "feature": "组织级 Webhook",
+    "status": "未实现",
+    "detail": "既无原生管理，也未为本机启用/验证对应组织环境变量。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F194",
+    "module": "Webhooks 与开发集成",
+    "feature": "调用现有 Django REST API",
+    "status": "部分实现",
+    "detail": "桌面使用业务所需接口，不是覆盖整个 Label Studio API 的管理客户端。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F195",
+    "module": "Webhooks 与开发集成",
+    "feature": "Python SDK 自动化",
+    "status": "仅后端已有",
+    "detail": "外部 SDK 可继续使用同一 Django；不是 QML 内置脚本/SDK 控制台。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F196",
+    "module": "Webhooks 与开发集成",
+    "feature": "API/文档等资源链接",
+    "status": "仅网页跳转",
+    "detail": "能从首页打开文档，不能算实现文档所描述的业务功能。",
+    "edition": "社区版/本机网页",
+    "source": "https://labelstudio.com.cn/guide/webhooks",
+    "evidence": "qml/ProjectSettings.qml; src/apiclient.h; qml/HomePage.qml"
+  },
+  {
+    "id": "F197",
+    "module": "桌面基础与本地增强",
+    "feature": "全原生 QML / Material",
+    "status": "已实现",
+    "detail": "C++17 + Qt Quick Controls Material；不依赖网页嵌入。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F198",
+    "module": "桌面基础与本地增强",
+    "feature": "中英文即时切换及记忆",
+    "status": "已实现",
+    "detail": "303 条应用翻译；Qt 标准控件翻译；保留编辑和选择。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F199",
+    "module": "桌面基础与本地增强",
+    "feature": "浅色/深色主题及记忆",
+    "status": "已实现",
+    "detail": "Material 配合 Theme 状态和 QSettings。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F200",
+    "module": "桌面基础与本地增强",
+    "feature": "日期本地化",
+    "status": "部分实现",
+    "detail": "项目卡片跟随语言；任务列表仍手工截取 ISO 字符串。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F201",
+    "module": "桌面基础与本地增强",
+    "feature": "MSVC 编译与运行库打包",
+    "status": "已实现",
+    "detail": "Qt 6.12 + VS 2026；有 windeployqt 独立运行验证。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F202",
+    "module": "桌面基础与本地增强",
+    "feature": "Qt 6.6.3 实机兼容验证",
+    "status": "未验证",
+    "detail": "CMake 最低版本为 6.6.3，现有实际测试仅 Qt 6.12。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F203",
+    "module": "桌面基础与本地增强",
+    "feature": "离线演示",
+    "status": "已实现",
+    "detail": "示例只保存在内存；不等于真实项目离线标注。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F204",
+    "module": "桌面基础与本地增强",
+    "feature": "真实任务离线缓存、恢复和同步",
+    "status": "未实现",
+    "detail": "没有本地项目数据库或离线提交队列。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F205",
+    "module": "桌面基础与本地增强",
+    "feature": "自动启动/停止 Django 与服务状态",
+    "status": "未实现",
+    "detail": "后端由用户单独启动。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F206",
+    "module": "桌面基础与本地增强",
+    "feature": "跨重启会话/凭据记忆",
+    "status": "未实现",
+    "detail": "凭据只保存在进程内存；只记服务器地址、主题、显式语言选择。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "F207",
+    "module": "桌面基础与本地增强",
+    "feature": "更新检查/安装器/签名",
+    "status": "未实现",
+    "detail": "当前是可分发目录，没有完整安装升级流程。",
+    "edition": "桌面自身能力，非社区版对等分母",
+    "source": "https://labelstudio.com.cn/guide/hotkeys",
+    "evidence": "qml/Main.qml; src/languagemanager.cpp; build.ps1"
+  },
+  {
+    "id": "T001",
+    "module": "标签目录",
+    "feature": "Audio",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/audio",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T002",
+    "module": "标签目录",
+    "feature": "Chat",
+    "status": "未实现",
+    "detail": "QML 无对应引擎；文档含商业版/实验功能，本机是否可用须另核对。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/chat",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T003",
+    "module": "标签目录",
+    "feature": "HyperText",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/hypertext",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T004",
+    "module": "标签目录",
+    "feature": "Image",
+    "status": "部分实现",
+    "detail": "仅一个直接字段图片；无多图、列表、旋转及完整对象属性。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/image",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T005",
+    "module": "标签目录",
+    "feature": "List",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/list",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T006",
+    "module": "标签目录",
+    "feature": "Paragraphs",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/paragraphs",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T007",
+    "module": "标签目录",
+    "feature": "Pdf",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/pdf",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T008",
+    "module": "标签目录",
+    "feature": "ReactCode",
+    "status": "未实现",
+    "detail": "QML 无对应引擎；文档含商业版/实验功能，本机是否可用须另核对。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/reactcode",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T009",
+    "module": "标签目录",
+    "feature": "Table",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/table",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T010",
+    "module": "标签目录",
+    "feature": "Text",
+    "status": "未实现",
+    "detail": "解析白名单允许该标签，但实际内容/效果未呈现；不能标为已支持。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/text",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T011",
+    "module": "标签目录",
+    "feature": "TimeSeries",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/timeseries",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T012",
+    "module": "标签目录",
+    "feature": "Video",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/video",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T013",
+    "module": "标签目录",
+    "feature": "Brush",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/brush",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T014",
+    "module": "标签目录",
+    "feature": "BrushLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/brushlabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T015",
+    "module": "标签目录",
+    "feature": "BitmaskLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/bitmasklabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T016",
+    "module": "标签目录",
+    "feature": "Choice",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/choice",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T017",
+    "module": "标签目录",
+    "feature": "Choices",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/choices",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T018",
+    "module": "标签目录",
+    "feature": "DateTime",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/datetime",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T019",
+    "module": "标签目录",
+    "feature": "Ellipse",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/ellipse",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T020",
+    "module": "标签目录",
+    "feature": "EllipseLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/ellipselabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T021",
+    "module": "标签目录",
+    "feature": "HyperTextLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/hypertextlabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T022",
+    "module": "标签目录",
+    "feature": "KeyPoint",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/keypoint",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T023",
+    "module": "标签目录",
+    "feature": "KeyPointLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/keypointlabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T024",
+    "module": "标签目录",
+    "feature": "Label",
+    "status": "部分实现",
+    "detail": "静态名称和颜色；无 alias、动态标签、hotkey 等。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/label",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T025",
+    "module": "标签目录",
+    "feature": "Labels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/labels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T026",
+    "module": "标签目录",
+    "feature": "MagicWand",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/magicwand",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T027",
+    "module": "标签目录",
+    "feature": "Number",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/number",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T028",
+    "module": "标签目录",
+    "feature": "Pairwise",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/pairwise",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T029",
+    "module": "标签目录",
+    "feature": "ParagraphLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/paragraphlabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T030",
+    "module": "标签目录",
+    "feature": "Polygon",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/polygon",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T031",
+    "module": "标签目录",
+    "feature": "PolygonLabels",
+    "status": "部分实现",
+    "detail": "基础绘制/编辑/保存已实现；不含全部标签属性与高级交互。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/polygonlabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T032",
+    "module": "标签目录",
+    "feature": "Ranker",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/ranker",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T033",
+    "module": "标签目录",
+    "feature": "Rating",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/rating",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T034",
+    "module": "标签目录",
+    "feature": "Rectangle",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/rectangle",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T035",
+    "module": "标签目录",
+    "feature": "RectangleLabels",
+    "status": "部分实现",
+    "detail": "基础绘制/编辑/保存已实现；不含全部标签属性与高级交互。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/rectanglelabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T036",
+    "module": "标签目录",
+    "feature": "Relation",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/relation",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T037",
+    "module": "标签目录",
+    "feature": "Relations",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/relations",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T038",
+    "module": "标签目录",
+    "feature": "Shortcut",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/shortcut",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T039",
+    "module": "标签目录",
+    "feature": "Taxonomy",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/taxonomy",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T040",
+    "module": "标签目录",
+    "feature": "TextArea",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/textarea",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T041",
+    "module": "标签目录",
+    "feature": "TimeSeriesLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/timeserieslabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T042",
+    "module": "标签目录",
+    "feature": "TimelineLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/timelinelabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T043",
+    "module": "标签目录",
+    "feature": "Vector",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/vector",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T044",
+    "module": "标签目录",
+    "feature": "VectorLabels",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/vectorlabels",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T045",
+    "module": "标签目录",
+    "feature": "VideoRectangle",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/videorectangle",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T046",
+    "module": "标签目录",
+    "feature": "Collapse",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/collapse",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T047",
+    "module": "标签目录",
+    "feature": "Filter",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/filter",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T048",
+    "module": "标签目录",
+    "feature": "Header",
+    "status": "未实现",
+    "detail": "解析白名单允许该标签，但实际内容/效果未呈现；不能标为已支持。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/header",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T049",
+    "module": "标签目录",
+    "feature": "Markdown",
+    "status": "未实现",
+    "detail": "无对应原生对象/控件/结果处理；不支持的配置会被拒绝。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/markdown",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T050",
+    "module": "标签目录",
+    "feature": "Style",
+    "status": "未实现",
+    "detail": "解析白名单允许该标签，但实际内容/效果未呈现；不能标为已支持。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/style",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "T051",
+    "module": "标签目录",
+    "feature": "View",
+    "status": "部分实现",
+    "detail": "仅作为 XML 结构容器接受；不渲染嵌套布局/样式。",
+    "edition": "文档标签；不同版本可用性以本机为准",
+    "source": "https://labelstudio.com.cn/tags/view",
+    "evidence": "src/annotationdocument.cpp: configure/load 白名单"
+  },
+  {
+    "id": "M001",
+    "module": "模板目录",
+    "feature": "多边形语义分割",
+    "status": "部分实现",
+    "detail": "QML 提供这一任务类型的基础模板和绘制流程；不代表完整复制官方模板全部参数/交互。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_polygons",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M002",
+    "module": "模板目录",
+    "feature": "掩码语义分割",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_segmentation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M003",
+    "module": "模板目录",
+    "feature": "边界框目标检测",
+    "status": "部分实现",
+    "detail": "QML 提供这一任务类型的基础模板和绘制流程；不代表完整复制官方模板全部参数/交互。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_bbox",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M004",
+    "module": "模板目录",
+    "feature": "椭圆目标检测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_ellipse",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M005",
+    "module": "模板目录",
+    "feature": "关键点标注",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_keypoints",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M006",
+    "module": "模板目录",
+    "feature": "光学字符识别 (OCR)",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/optical_character_recognition",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M007",
+    "module": "模板目录",
+    "feature": "PDF OCR 标注",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/pdf_ocr",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M008",
+    "module": "模板目录",
+    "feature": "多页文档标注",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/multi-page-document-annotation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M009",
+    "module": "模板目录",
+    "feature": "图像描述生成",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_captioning",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M010",
+    "module": "模板目录",
+    "feature": "图像分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/image_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M011",
+    "module": "模板目录",
+    "feature": "多图像分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/multi-image_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M012",
+    "module": "模板目录",
+    "feature": "视觉问答",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/visual_question_answering",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M013",
+    "module": "模板目录",
+    "feature": "库存追踪",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/inventory_tracking",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M014",
+    "module": "模板目录",
+    "feature": "视觉基因组 (Visual Genome)",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/visual_genome",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M015",
+    "module": "模板目录",
+    "feature": "带边界框的医学图像分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/medical_imaging_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M016",
+    "module": "模板目录",
+    "feature": "命名实体识别",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/named_entity",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M017",
+    "module": "模板目录",
+    "feature": "情感分析文本分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/sentiment_analysis",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M018",
+    "module": "模板目录",
+    "feature": "分类法",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/taxonomy",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M019",
+    "module": "模板目录",
+    "feature": "关系抽取",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/relation_extraction",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M020",
+    "module": "模板目录",
+    "feature": "文本摘要",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/text_summarization",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M021",
+    "module": "模板目录",
+    "feature": "机器翻译",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/machine_translation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M022",
+    "module": "模板目录",
+    "feature": "问答",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/question_answering",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M023",
+    "module": "模板目录",
+    "feature": "内容审核",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/content_moderation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M024",
+    "module": "模板目录",
+    "feature": "上下文滚动",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/contextual_scrolling",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M025",
+    "module": "模板目录",
+    "feature": "自动语音识别",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/transcribe_audio",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M026",
+    "module": "模板目录",
+    "feature": "基于片段的自动语音识别",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/automatic_speech_recognition_segments",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M027",
+    "module": "模板目录",
+    "feature": "信号质量检测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/signal_quality_detection",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M028",
+    "module": "模板目录",
+    "feature": "声音事件检测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/sound_event_detection",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M029",
+    "module": "模板目录",
+    "feature": "语音活动检测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/voice_activity_detection",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M030",
+    "module": "模板目录",
+    "feature": "说话人日志 (Speaker Diarization)",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/speaker_segmentation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M031",
+    "module": "模板目录",
+    "feature": "音频分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/audio_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M032",
+    "module": "模板目录",
+    "feature": "基于片段的音频分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/audio_regions",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M033",
+    "module": "模板目录",
+    "feature": "意图分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/intent_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M034",
+    "module": "模板目录",
+    "feature": "电子表格编辑器",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/react_spreadsheet",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M035",
+    "module": "模板目录",
+    "feature": "多通道音频转录",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/react_audio",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M036",
+    "module": "模板目录",
+    "feature": "理赔代理追踪",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/react_claims",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M037",
+    "module": "模板目录",
+    "feature": "视觉排序器",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/generative-visual-ranker",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M038",
+    "module": "模板目录",
+    "feature": "搜索页面排名",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/serp_ranking",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M039",
+    "module": "模板目录",
+    "feature": "网站评分",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/website_rating",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M040",
+    "module": "模板目录",
+    "feature": "配对回归",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/pairwise_regression",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M041",
+    "module": "模板目录",
+    "feature": "配对分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/pairwise_comparison",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M042",
+    "module": "模板目录",
+    "feature": "基于内容的图像检索",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/content_image_retrieval",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M043",
+    "module": "模板目录",
+    "feature": "文档检索",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/document_retrieval",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M044",
+    "module": "模板目录",
+    "feature": "文本生成图像",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/text_to_image",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M045",
+    "module": "模板目录",
+    "feature": "ASR 假设选择",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/asr_hypotheses",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M046",
+    "module": "模板目录",
+    "feature": "自由格式元数据",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/freeform_metadata",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M047",
+    "module": "模板目录",
+    "feature": "表格数据",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/tabular_data",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M048",
+    "module": "模板目录",
+    "feature": "PDF 分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/pdf_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M049",
+    "module": "模板目录",
+    "feature": "HTML 实体识别",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/html_document",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M050",
+    "module": "模板目录",
+    "feature": "HTML 分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/html_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M051",
+    "module": "模板目录",
+    "feature": "时间序列标注",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/time_series",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M052",
+    "module": "模板目录",
+    "feature": "时间序列分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/time_series_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M053",
+    "module": "模板目录",
+    "feature": "时间序列预测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/time_series_forecasting",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M054",
+    "module": "模板目录",
+    "feature": "带音频和视频同步的时间序列标注",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/timeseries_audio_video",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M055",
+    "module": "模板目录",
+    "feature": "变点检测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/change_point_detection",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M056",
+    "module": "模板目录",
+    "feature": "活动识别",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/activity_recognition",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M057",
+    "module": "模板目录",
+    "feature": "信号质量",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/signal_quality",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M058",
+    "module": "模板目录",
+    "feature": "离群值与异常检测",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/outliers_anomaly_detection",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M059",
+    "module": "模板目录",
+    "feature": "视频分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/video_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M060",
+    "module": "模板目录",
+    "feature": "视频帧分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/video_frame_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M061",
+    "module": "模板目录",
+    "feature": "视频时间轴分割",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/video_timeline_segmentation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M062",
+    "module": "模板目录",
+    "feature": "视频目标检测与追踪",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/video_object_detector",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M063",
+    "module": "模板目录",
+    "feature": "响应生成",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/response_generation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M064",
+    "module": "模板目录",
+    "feature": "响应选择",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/response_selection",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M065",
+    "module": "模板目录",
+    "feature": "共指消解与实体链接",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/coreference_entity_linking",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M066",
+    "module": "模板目录",
+    "feature": "对话分析",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/dialogue_analysis",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M067",
+    "module": "模板目录",
+    "feature": "槽位填充与意图分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/slot_filling",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M068",
+    "module": "模板目录",
+    "feature": "聊天机器人评估",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/chatbot",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M069",
+    "module": "模板目录",
+    "feature": "利用 LLM 微调代理",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/chat_llm_eval",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M070",
+    "module": "模板目录",
+    "feature": "不利用 LLM 微调代理",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/chat_eval",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M071",
+    "module": "模板目录",
+    "feature": "聊天中的红队测试",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/chat_red_team",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M072",
+    "module": "模板目录",
+    "feature": "评估生产对话以进行 RLHF",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档标注为商业版",
+    "source": "https://labelstudio.com.cn/templates/chat_rlhf",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M073",
+    "module": "模板目录",
+    "feature": "监督式 LLM 微调",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/generative-supervised-llm",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M074",
+    "module": "模板目录",
+    "feature": "为 RLHF 收集人类偏好",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/generative-pairwise-human-preference",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M075",
+    "module": "模板目录",
+    "feature": "RAG 检索",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/generative-llm-ranker",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M076",
+    "module": "模板目录",
+    "feature": "LLM 响应审核",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/llm_response_moderation",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M077",
+    "module": "模板目录",
+    "feature": "LLM 响应评分",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/llm_response_grading",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M078",
+    "module": "模板目录",
+    "feature": "并排 LLM 输出对比",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/llm_side_by_side",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M079",
+    "module": "模板目录",
+    "feature": "利用人类反馈评估 RAG",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/llm_rag_human_feedback",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M080",
+    "module": "模板目录",
+    "feature": "利用 Ragas 评估 RAG",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/llm_ragas",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M081",
+    "module": "模板目录",
+    "feature": "多轮对话评估",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/multi_turn_chat",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M082",
+    "module": "模板目录",
+    "feature": "乳腺癌乳房 X 光图像分类",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/breast_cancer_mammogram_classification",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M083",
+    "module": "模板目录",
+    "feature": "HTML NER 标注",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/html_ner_tagging_person_and_organization",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M084",
+    "module": "模板目录",
+    "feature": "发票 NER 标注 (BIO 格式)",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/ner_tagging_invoices_bio_format",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M085",
+    "module": "模板目录",
+    "feature": "发票 OCR 预 NER BIO 格式",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/ocr_invoices_pre_ner_bio_format",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "M086",
+    "module": "模板目录",
+    "feature": "X / Twitter 帖子的二级情感分析",
+    "status": "未实现",
+    "detail": "没有对应原生模板/对象/控制标签组合；分类标题出现不等于模板可用。",
+    "edition": "文档未标锁；不保证每项均适用于本机版本",
+    "source": "https://labelstudio.com.cn/templates/two_level_sentiment_analysis_of_x_twitter_posts",
+    "evidence": "qml/LabelingSetup.qml; src/annotationdocument.cpp"
+  },
+  {
+    "id": "E001",
+    "module": "商业版功能对照",
+    "feature": "基于角色的工作流",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:受限；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E002",
+    "module": "商业版功能对照",
+    "feature": "基于角色的访问控制",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:受限；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E003",
+    "module": "商业版功能对照",
+    "feature": "可自定义的权限",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E004",
+    "module": "商业版功能对照",
+    "feature": "高级云存储集成",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E005",
+    "module": "商业版功能对照",
+    "feature": "聊天",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:受限；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E006",
+    "module": "商业版功能对照",
+    "feature": "在工作区中组织项目",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E007",
+    "module": "商业版功能对照",
+    "feature": "个人沙盒工作区",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E008",
+    "module": "商业版功能对照",
+    "feature": "AI 助手",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E009",
+    "module": "商业版功能对照",
+    "feature": "项目成员资格",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E010",
+    "module": "商业版功能对照",
+    "feature": "项目级角色",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:受限；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E011",
+    "module": "商业版功能对照",
+    "feature": "项目级用户设置",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:受限；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E012",
+    "module": "商业版功能对照",
+    "feature": "分配任务",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E013",
+    "module": "商业版功能对照",
+    "feature": "自动分配任务",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E014",
+    "module": "商业版功能对照",
+    "feature": "简化的标注员界面",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E015",
+    "module": "商业版功能对照",
+    "feature": "批量标注",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E016",
+    "module": "商业版功能对照",
+    "feature": "可编程与可嵌入界面",
+    "status": "未实现（需区分版本）",
+    "detail": "对照表将此项列为商业能力，但经典 LSF 嵌入、自行修改开源界面与商业版相应产品能力并非同一范围；QML 未提供对应兼容接口，不能据此断言所有同类集成都必须付费。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E017",
+    "module": "商业版功能对照",
+    "feature": "白标 (White Labeling)",
+    "status": "未实现（需区分版本）",
+    "detail": "对照表将此项列为商业能力，但经典 LSF 嵌入、自行修改开源界面与商业版相应产品能力并非同一范围；QML 未提供对应兼容接口，不能据此断言所有同类集成都必须付费。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E018",
+    "module": "商业版功能对照",
+    "feature": "插件",
+    "status": "未实现（需区分版本）",
+    "detail": "对照表将此项列为商业能力，但经典 LSF 嵌入、自行修改开源界面与商业版相应产品能力并非同一范围；QML 未提供对应兼容接口，不能据此断言所有同类集成都必须付费。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E019",
+    "module": "商业版功能对照",
+    "feature": "自动化预标注",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E020",
+    "module": "商业版功能对照",
+    "feature": "LLM 微调与评估",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E021",
+    "module": "商业版功能对照",
+    "feature": "运行基准测试",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E022",
+    "module": "商业版功能对照",
+    "feature": "主动学习循环",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E023",
+    "module": "商业版功能对照",
+    "feature": "项目仪表板",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E024",
+    "module": "商业版功能对照",
+    "feature": "标注员绩效仪表板",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E025",
+    "module": "商业版功能对照",
+    "feature": "活动日志",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E026",
+    "module": "商业版功能对照",
+    "feature": "标注历史记录",
+    "status": "未实现（本机入口可见）",
+    "detail": "本机有界面入口，但本轮未验证完整服务端读写/授权能力；QML 无对应功能。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E027",
+    "module": "商业版功能对照",
+    "feature": "分配审核员",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E028",
+    "module": "商业版功能对照",
+    "feature": "任务自动重新分配",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E029",
+    "module": "商业版功能对照",
+    "feature": "一致性指标",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E030",
+    "module": "商业版功能对照",
+    "feature": "自定义一致性指标",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E031",
+    "module": "商业版功能对照",
+    "feature": "评论与通知",
+    "status": "未实现（本机入口可见）",
+    "detail": "本机有界面入口，但本轮未验证完整服务端读写/授权能力；QML 无对应功能。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E032",
+    "module": "商业版功能对照",
+    "feature": "识别基础事实",
+    "status": "已实现（本机差异）",
+    "detail": "对照表把此项列为付费；本机 Django 支持 ground_truth，QML 已实现并有真实联调记录。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E033",
+    "module": "商业版功能对照",
+    "feature": "重叠配置",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E034",
+    "module": "商业版功能对照",
+    "feature": "暂停标注员",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E035",
+    "module": "商业版功能对照",
+    "feature": "标注限制",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E036",
+    "module": "商业版功能对照",
+    "feature": "标注员共识矩阵",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E037",
+    "module": "商业版功能对照",
+    "feature": "标签分布图表",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E038",
+    "module": "商业版功能对照",
+    "feature": "SSO",
+    "status": "未实现（版本受限）",
+    "detail": "版本对照标为社区版无此功能；QML 未实现，不能仅补前端就取得商业后端能力。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E039",
+    "module": "商业版功能对照",
+    "feature": "SOC2",
+    "status": "不适用（认证/服务）",
+    "detail": "这是供应商认证、合同或支持服务，不是可由 QML 实现的界面功能；保留该行仅为完整对照原表。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E040",
+    "module": "商业版功能对照",
+    "feature": "支持门户",
+    "status": "不适用（认证/服务）",
+    "detail": "这是供应商认证、合同或支持服务，不是可由 QML 实现的界面功能；保留该行仅为完整对照原表。",
+    "edition": "社区:无；Starter:✅；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E041",
+    "module": "商业版功能对照",
+    "feature": "正常运行时间 SLA",
+    "status": "不适用（认证/服务）",
+    "detail": "这是供应商认证、合同或支持服务，不是可由 QML 实现的界面功能；保留该行仅为完整对照原表。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E042",
+    "module": "商业版功能对照",
+    "feature": "客户成功经理",
+    "status": "不适用（认证/服务）",
+    "detail": "这是供应商认证、合同或支持服务，不是可由 QML 实现的界面功能；保留该行仅为完整对照原表。",
+    "edition": "社区:无；Starter:❌；企业:✅",
+    "source": "https://labelstudio.com.cn/guide/label_studio_compare",
+    "evidence": "版本对照表 + 本地网页/代码"
+  },
+  {
+    "id": "E043",
+    "module": "商业版功能对照",
+    "feature": "SCIM 用户/组自动配置",
+    "status": "未实现（版本受限）",
+    "detail": "身份提供商同步用户、角色和组，现有 QML 无实现。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "E044",
+    "module": "商业版功能对照",
+    "feature": "多租户组织隔离",
+    "status": "未实现（版本受限）",
+    "detail": "独立组织的资源与用户隔离，需要企业级后端能力。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "E045",
+    "module": "商业版功能对照",
+    "feature": "Databricks Unity Catalog 存储",
+    "status": "未实现（版本受限）",
+    "detail": "商业连接器；QML 无任何存储连接器管理。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "E046",
+    "module": "商业版功能对照",
+    "feature": "S3 IAM / GCS WIF / Azure 服务主体",
+    "status": "未实现（版本受限）",
+    "detail": "高级云存储认证组合；QML 未实现。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "E047",
+    "module": "商业版功能对照",
+    "feature": "提示词模板、内联运行和生成任务",
+    "status": "未实现（版本受限）",
+    "detail": "Prompts 模块；QML 无。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "E048",
+    "module": "商业版功能对照",
+    "feature": "任务预留、重试与跳过理由策略",
+    "status": "未实现（版本受限）",
+    "detail": "企业项目工作流选项，QML 只有基础 skip。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "E049",
+    "module": "商业版功能对照",
+    "feature": "自定义标签权重和低一致性策略",
+    "status": "未实现（版本受限）",
+    "detail": "质量管理规则及服务端策略，QML 无。",
+    "edition": "企业版/商业能力，需对应后端",
+    "source": "https://labelstudio.com.cn/guide/enterprise_features",
+    "evidence": "企业功能文档；QML/C++ 无相关模块"
+  },
+  {
+    "id": "B001",
+    "module": "后端/部署边界",
+    "feature": "命令行初始化管理员/用户及检索信息",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "现有 Django/CLI 职责，QML 无用户创建管理界面。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B002",
+    "module": "后端/部署边界",
+    "feature": "仅允许邀请链接注册",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "LABEL_STUDIO_DISABLE_SIGNUP_WITHOUT_LINK 由服务端环境配置。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/signup",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B003",
+    "module": "后端/部署边界",
+    "feature": "SQLite/PostgreSQL 配置与迁移",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "数据库由 Django 管理，不应在 QML 重写数据库。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/storedata",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B004",
+    "module": "后端/部署边界",
+    "feature": "数据目录、持久化和备份恢复",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "服务端部署运维能力；桌面无原生运维面板。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/persistent_storage",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B005",
+    "module": "后端/部署边界",
+    "feature": "pip/源码/Docker 安装启动",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "现有 Django 部署流程；QML 未打包 Python 后端。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/install",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B006",
+    "module": "后端/部署边界",
+    "feature": "Kubernetes/Helm/Ingress/气隙部署",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "部署环境能力；不计为普通桌面页面缺口。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/install_k8s",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B007",
+    "module": "后端/部署边界",
+    "feature": "后端升级与数据库迁移",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "保留原有服务端维护方式，桌面无升级管理。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/upgrade_community",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B008",
+    "module": "后端/部署边界",
+    "feature": "HTTPS、CORS、CSRF 与服务端安全策略",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "服务器配置继续有效；桌面遵守会话/CSRF，非安全策略管理器。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/security",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B009",
+    "module": "后端/部署边界",
+    "feature": "REST API、Python SDK 与脚本导入导出",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "现有后端/API 不因换用 QML 消失；桌面仅调用部分接口。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/api",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B010",
+    "module": "后端/部署边界",
+    "feature": "自定义 ML 后端开发和部署",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "模型服务代码独立于 UI；QML 尚缺模型连接管理。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/ml_create",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B011",
+    "module": "后端/部署边界",
+    "feature": "Webhook 投递、超时和日志",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "已配置时 Django 负责执行，QML 缺管理页面。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/webhook_create",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  },
+  {
+    "id": "B012",
+    "module": "后端/部署边界",
+    "feature": "经典 LSF JavaScript 嵌入 API/回调",
+    "status": "保留后端能力／未做桌面管理",
+    "detail": "属于浏览器前端集成接口；文档指出独立 LSF 包已弃用，不能视为原生 QML 已兼容。",
+    "edition": "后端/运维边界，不计普通 QML 功能缺口",
+    "source": "https://labelstudio.com.cn/guide/frontend_reference",
+    "evidence": "现有 Django 项目与所列文档；本轮不宣称已验证全部部署方式"
+  }
+]
